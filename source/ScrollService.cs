@@ -16,7 +16,7 @@ internal sealed class ScrollService : IDisposable {
     readonly Stopwatch clock = Stopwatch.StartNew();
     readonly Native.HookProc callback;
     volatile Settings settings;
-    volatile Policy policy = new Policy {Name="等待鼠标移入窗口"};
+    volatile Policy policy = new Policy {Name=UiText.Get("Waiting")};
     volatile bool enabled, closing;
     volatile string fault = "";
     volatile string notice = "";
@@ -39,12 +39,12 @@ internal sealed class ScrollService : IDisposable {
         worker=new Thread(WorkerLoop); worker.IsBackground=true; worker.Name="SmoothFlow animation";
         policyWorker=new Thread(PolicyLoop);policyWorker.IsBackground=true;policyWorker.Name="SmoothFlow application rules";
         hookThread.Start(); worker.Start();policyWorker.Start();
-        if(!ready.WaitOne(4000)) fault="输入钩子启动超时";
+        if(!ready.WaitOne(4000)) fault=UiText.Get("HookTimeout");
     }
     internal void Configure(Settings s) {
         lock(gate) {
             settings=s.Snapshot();
-            policy=new Policy {Name="正在更新应用规则"};
+            policy=new Policy {Name=UiText.Get("Updating")};
             motion.Clear();
             motion.FineSteps=s.FineSteps;
             Interlocked.Increment(ref generation);
@@ -64,10 +64,10 @@ internal sealed class ScrollService : IDisposable {
             using(Control queueOwner=new Control()) {
                 IntPtr ignored=queueOwner.Handle;
                 hook=Native.SetWindowsHookEx(14,callback,Native.GetModuleHandle(null),0);
-                if(hook==IntPtr.Zero) { fault="无法安装鼠标钩子，错误 "+Marshal.GetLastWin32Error(); return; }
+                if(hook==IntPtr.Zero) { fault=UiText.Get("HookError")+" · "+Marshal.GetLastWin32Error(); return; }
                 ready.Set(); Application.Run();
             }
-        } catch(Exception ex) { fault="输入线程："+ex.Message; enabled=false; }
+        } catch(Exception ex) { fault=UiText.Get("InputError")+" · "+ex.Message; enabled=false; }
         finally { ready.Set(); if(hook!=IntPtr.Zero) {Native.UnhookWindowsHookEx(hook); hook=IntPtr.Zero;} }
     }
     IntPtr OnMouse(int code, IntPtr message, IntPtr data) {
@@ -97,19 +97,19 @@ internal sealed class ScrollService : IDisposable {
                     Interlocked.Increment(ref inputCount); wake.Set(); return new IntPtr(1);
                 }
             }
-        } catch(Exception ex) { fault="输入处理已暂停："+ex.Message; enabled=false; Cancel(); }
+        } catch(Exception ex) { fault=UiText.Get("InputError")+" · "+ex.Message; enabled=false; Cancel(); }
         return Native.CallNextHookEx(hook,code,message,data);
     }
     void RefreshPolicy() {
         Settings configuration=settings;
         IntPtr root=Native.RootAtCursor(); uint pid; Native.GetWindowThreadProcessId(root,out pid);
-        string name="未知应用"; bool allowed=false;
+        string name=UiText.Get("Unknown"); bool allowed=false;
         try {
             using(Process p=Process.GetProcessById((int)pid)) {
                 name=p.ProcessName; allowed=Native.CanInject(pid) && (pid==(uint)ownPid ? root==DemoWindow : configuration.Allows(name,false));
             }
         } catch { }
-        policy=new Policy {Root=root,Allowed=allowed,Name=name+(allowed ? " · 可平滑" : " · 原始滚动"),Configuration=configuration,Options=configuration.OptionsFor(name)};
+        policy=new Policy {Root=root,Allowed=allowed,Name=name+(allowed ? " · "+UiText.Get("Enabled") : " · "+UiText.Get("Original")),Configuration=configuration,Options=configuration.OptionsFor(name)};
     }
     void PolicyLoop() {
         int checks=0;
@@ -121,7 +121,7 @@ internal sealed class ScrollService : IDisposable {
                     foreach(string name in new string[]{"SmoothScroll","smoothscroll-app"}) {
                         Process[] other=Process.GetProcessesByName(name);bool present=other.Length>0;
                         foreach(Process p in other)p.Dispose();
-                        if(present){enabled=false;Cancel();notice="检测到另一套滚动引擎，已自动暂停";break;}
+                        if(present){enabled=false;Cancel();notice=UiText.Get("AutoPaused");break;}
                     }
                 }
             }catch { }
@@ -156,11 +156,11 @@ internal sealed class ScrollService : IDisposable {
                 nextFrame=FramePacer.FollowingDeadline(nextFrame,clock.Elapsed.TotalMilliseconds,period);
             }
             }
-        } catch(Exception ex) {fault="滚动线程已暂停："+ex.Message;enabled=false;}
+        } catch(Exception ex) {fault=UiText.Get("ScrollError")+" · "+ex.Message;enabled=false;}
         finally {if(timerResolution) Native.timeEndPeriod(1);}
     }
     void Send(int delta,bool horizontal) {
-        if(!Native.Inject(delta,horizontal)) {fault="系统拒绝模拟输入，已暂停。请在普通权限窗口测试。";enabled=false;Cancel();}
+        if(!Native.Inject(delta,horizontal)) {fault=UiText.Get("InputDenied");enabled=false;Cancel();}
         else Interlocked.Increment(ref outputCount);
     }
     public void Dispose() {

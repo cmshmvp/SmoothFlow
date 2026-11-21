@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+  <language id="en">
+    <AutoStart>Start on login</AutoStart>
+    <Enabled>Enabled</Enabled>
+    <Paused>Paused</Paused>
+    <Profile>Application profile</Profile>
+    <DefaultProfile>Default (all applications)</DefaultProfile>
+    <Distance>Scroll distance</Distance>
+    <Duration>Animation time</Duration>
+    <AccelWindow>Acceleration interval</AccelWindow>
+    <AccelMax>Maximum acceleration</AccelMax>
+    <Tail>Tail-to-head ratio</Tail>
+    <AllApps>Enable by default for all apps</AllApps>
+    <ThisApp>Enable for this application</ThisApp>
+    <Easing>Animation easing</Easing>
+    <Shift>Horizontal scrolling with Shift</Shift>
+    <Horizontal>Smooth horizontal scrolling</Horizontal>
+    <Reverse>Reverse wheel direction</Reverse>
+    <Reset>Reset all</Reset>
+    <Fine>Fine steps</Fine>
+    <Open>Open settings</Open>
+    <Toggle>Pause or resume</Toggle>
+    <Quit>Quit</Quit>
+    <AddApp>Add application</AddApp>
+    <RemoveApp>Remove application profile</RemoveApp>
+    <ProcessHint>Process name, e.g. Weixin.exe</ProcessHint>
+    <Add>Add</Add>
+    <BadName>Enter an executable name without its folder path.</BadName>
+    <Help>Scrolling settings</Help>
+    <FineHelp>Fine steps soften the end of a scroll. Switch them on or off in the tray menu.</FineHelp>
+    <DistanceTip>1× preserves the distance of one wheel notch.</DistanceTip>
+    <Fixed>Fixed value</Fixed>
+    <ShiftTip>The application handles Shift + wheel directly.</ShiftTip>
+    <CloseHint>Close to hide in the system tray</CloseHint>
+    <Running>SmoothFlow is already running. Open settings from its tray icon.</Running>
+    <StartupError>Could not save the login startup setting</StartupError>
+    <OtherEngine>Quit SmoothScroll before enabling SmoothFlow.</OtherEngine>
+    <AutoPaused>Paused because another scrolling utility is running.</AutoPaused>
+    <HookTimeout>Mouse input setup timed out.</HookTimeout>
+    <HookError>Could not initialize mouse input</HookError>
+    <InputError>Mouse input error</InputError>
+    <ScrollError>Scrolling paused after an error</ScrollError>
+    <InputDenied>Windows blocked scroll input. Try a window running without administrator privileges.</InputDenied>
+    <Waiting>Waiting for a window</Waiting>
+    <Updating>Updating application rules</Updating>
+    <Unknown>Unknown application</Unknown>
+    <Original>Native scrolling</Original>
+  </language>
+  <language id="zh-Hans">
+    <AutoStart>登录时启动</AutoStart>
+    <Enabled>已启用</Enabled>
+    <Paused>已暂停</Paused>
+    <Profile>应用配置</Profile>
+    <DefaultProfile>默认（所有应用）</DefaultProfile>
+    <Distance>滚动距离</Distance>
+    <Duration>动画时长</Duration>
+    <AccelWindow>加速间隔</AccelWindow>
+    <AccelMax>最大加速倍率</AccelMax>
+    <Tail>减速与加速时长比</Tail>
+    <AllApps>默认对所有应用启用</AllApps>
+    <ThisApp>对此应用启用</ThisApp>
+    <Easing>动画缓动</Easing>
+    <Shift>Shift 键横向滚动</Shift>
+    <Horizontal>平滑横向滚动</Horizontal>
+    <Reverse>反转滚轮方向</Reverse>
+    <Reset>全部重置</Reset>
+    <Fine>细步进</Fine>
+    <Open>打开设置</Open>
+    <Toggle>暂停或恢复</Toggle>
+    <Quit>退出</Quit>
+    <AddApp>添加应用</AddApp>
+    <RemoveApp>移除应用配置</RemoveApp>
+    <ProcessHint>进程名，例如 Weixin.exe</ProcessHint>
+    <Add>添加</Add>
+    <BadName>请输入可执行文件名，不要包含路径。</BadName>
+    <Help>滚动设置说明</Help>
+    <FineHelp>细步进让滚动平缓收尾，可在托盘菜单中切换。</FineHelp>
+    <DistanceTip>1 倍保留滚轮一格的原始距离。</DistanceTip>
+    <Fixed>固定值</Fixed>
+    <ShiftTip>Shift + 滚轮由当前应用直接处理。</ShiftTip>
+    <CloseHint>关闭窗口后隐藏到托盘</CloseHint>
+    <Running>SmoothFlow 已在运行，请从托盘图标打开设置。</Running>
+    <StartupError>未能保存登录启动设置</StartupError>
+    <OtherEngine>请退出 SmoothScroll 后再启用 SmoothFlow。</OtherEngine>
+    <AutoPaused>检测到其他滚动工具，已自动暂停。</AutoPaused>
+    <HookTimeout>鼠标输入初始化超时。</HookTimeout>
+    <HookError>无法初始化鼠标输入</HookError>
+    <InputError>鼠标输入错误</InputError>
+    <ScrollError>滚动出错，已暂停</ScrollError>
+    <InputDenied>Windows 已阻止滚动输入。请在非管理员窗口中重试。</InputDenied>
+    <Waiting>等待鼠标移入窗口</Waiting>
+    <Updating>正在更新应用规则</Updating>
+    <Unknown>未知应用</Unknown>
+    <Original>原始滚动</Original>
+  </language>
+  <language id="zh-Hant">
+    <AutoStart>登入時啟動</AutoStart>
+    <Enabled>已啟用</Enabled>
+    <Paused>已暫停</Paused>
+    <Profile>應用程式設定檔</Profile>
+    <DefaultProfile>預設（所有應用程式）</DefaultProfile>
+    <Distance>捲動距離</Distance>
+    <Duration>動畫時間</Duration>
+    <AccelWindow>加速間隔</AccelWindow>
+    <AccelMax>最大加速倍率</AccelMax>
+    <Tail>減速與加速時間比</Tail>
+    <AllApps>預設對所有應用程式啟用</AllApps>
+    <ThisApp>對此應用程式啟用</ThisApp>
+    <Easing>動畫緩動</Easing>
+    <Shift>Shift 鍵水平捲動</Shift>
+    <Horizontal>平滑水平捲動</Horizontal>
+    <Reverse>反轉滾輪方向</Reverse>
+    <Reset>全部重設</Reset>
+    <Fine>細步進</Fine>
+    <Open>開啟設定</Open>
+    <Toggle>暫停或繼續</Toggle>
+    <Quit>結束</Quit>
+    <AddApp>新增應用程式</AddApp>
+    <RemoveApp>移除應用程式設定檔</RemoveApp>
+    <ProcessHint>處理程序名稱，例如 Weixin.exe</ProcessHint>
+    <Add>新增</Add>
+    <BadName>請輸入執行檔名稱，不含路徑。</BadName>
+    <Help>捲動設定說明</Help>
+    <FineHelp>細步進讓捲動平緩收尾，可在通知區域選單中切換。</FineHelp>
+    <DistanceTip>1 倍保留滾輪一格的原始距離。</DistanceTip>
+    <Fixed>固定值</Fixed>
+    <ShiftTip>Shift + 滾輪由目前的應用程式直接處理。</ShiftTip>
+    <CloseHint>關閉視窗後隱藏至通知區域</CloseHint>
+    <Running>SmoothFlow 已在執行，請從通知區域圖示開啟設定。</Running>
+    <StartupError>無法儲存登入啟動設定</StartupError>
+    <OtherEngine>請先結束 SmoothScroll，再啟用 SmoothFlow。</OtherEngine>
+    <AutoPaused>偵測到其他捲動工具，已自動暫停。</AutoPaused>
+    <HookTimeout>滑鼠輸入初始化逾時。</HookTimeout>
+    <HookError>無法初始化滑鼠輸入</HookError>
+    <InputError>滑鼠輸入錯誤</InputError>
+    <ScrollError>捲動發生錯誤，已暫停</ScrollError>
+    <InputDenied>Windows 已封鎖捲動輸入。請在非系統管理員視窗中重試。</InputDenied>
+    <Waiting>等待滑鼠移入視窗</Waiting>
+    <Updating>正在更新應用程式規則</Updating>
+    <Unknown>未知應用程式</Unknown>
+    <Original>原生捲動</Original>
+  </language>
+  <language id="ja">
+    <AutoStart>ログイン時に起動</AutoStart>
+    <Enabled>有効</Enabled>
+    <Paused>一時停止中</Paused>
+    <Profile>アプリのプロファイル</Profile>
+    <DefaultProfile>既定（すべてのアプリ）</DefaultProfile>
+    <Distance>スクロール距離</Distance>
+    <Duration>アニメーション時間</Duration>
+    <AccelWindow>加速間隔</AccelWindow>
+    <AccelMax>最大加速倍率</AccelMax>
+    <Tail>減速と加速の時間比</Tail>
+    <AllApps>すべてのアプリで既定で有効にする</AllApps>
+    <ThisApp>このアプリで有効にする</ThisApp>
+    <Easing>イージング</Easing>
+    <Shift>Shift キーで横スクロール</Shift>
+    <Horizontal>横スクロールを滑らかにする</Horizontal>
+    <Reverse>ホイールの方向を反転</Reverse>
+    <Reset>すべてリセット</Reset>
+    <Fine>細かいスクロール</Fine>
+    <Open>設定を開く</Open>
+    <Toggle>一時停止／再開</Toggle>
+    <Quit>終了</Quit>
+    <AddApp>アプリを追加</AddApp>
+    <RemoveApp>アプリのプロファイルを削除</RemoveApp>
+    <ProcessHint>プロセス名（例：Weixin.exe）</ProcessHint>
+    <Add>追加</Add>
+    <BadName>フォルダーのパスを除いた実行ファイル名を入力してください。</BadName>
+    <Help>スクロール設定の説明</Help>
+    <FineHelp>細かいスクロールを使うと滑らかに止まります。通知領域のメニューで切り替えられます。</FineHelp>
+    <DistanceTip>1 倍ではホイール 1 目盛りの距離を維持します。</DistanceTip>
+    <Fixed>固定値</Fixed>
+    <ShiftTip>Shift ＋ホイールはアプリが直接処理します。</ShiftTip>
+    <CloseHint>閉じると通知領域に格納</CloseHint>
+    <Running>SmoothFlow は既に起動しています。通知領域のアイコンから設定を開いてください。</Running>
+    <StartupError>ログイン時の起動設定を保存できません</StartupError>
+    <OtherEngine>SmoothScroll を終了してから SmoothFlow を有効にしてください。</OtherEngine>
+    <AutoPaused>別のスクロールツールを検出したため一時停止しました。</AutoPaused>
+    <HookTimeout>マウス入力の初期化がタイムアウトしました。</HookTimeout>
+    <HookError>マウス入力を初期化できません</HookError>
+    <InputError>マウス入力エラー</InputError>
+    <ScrollError>エラーのためスクロールを一時停止しました</ScrollError>
+    <InputDenied>Windows がスクロール入力を拒否しました。管理者権限のないウィンドウでお試しください。</InputDenied>
+    <Waiting>ウィンドウを待機中</Waiting>
+    <Updating>アプリのルールを更新中</Updating>
+    <Unknown>不明なアプリ</Unknown>
+    <Original>標準スクロール</Original>
+  </language>
+  <language id="ko">
+    <AutoStart>로그인 시 시작</AutoStart>
+    <Enabled>사용 중</Enabled>
+    <Paused>일시 중지됨</Paused>
+    <Profile>앱 프로필</Profile>
+    <DefaultProfile>기본값(모든 앱)</DefaultProfile>
+    <Distance>스크롤 거리</Distance>
+    <Duration>애니메이션 시간</Duration>
+    <AccelWindow>가속 간격</AccelWindow>
+    <AccelMax>최대 가속 배율</AccelMax>
+    <Tail>감속·가속 시간 비율</Tail>
+    <AllApps>모든 앱에서 기본으로 사용</AllApps>
+    <ThisApp>이 앱에서 사용</ThisApp>
+    <Easing>애니메이션 완급 조절</Easing>
+    <Shift>Shift 키로 가로 스크롤</Shift>
+    <Horizontal>부드러운 가로 스크롤</Horizontal>
+    <Reverse>휠 방향 반전</Reverse>
+    <Reset>전체 초기화</Reset>
+    <Fine>미세 스크롤</Fine>
+    <Open>설정 열기</Open>
+    <Toggle>일시 중지 또는 재개</Toggle>
+    <Quit>종료</Quit>
+    <AddApp>앱 추가</AddApp>
+    <RemoveApp>앱 프로필 삭제</RemoveApp>
+    <ProcessHint>프로세스 이름(예: Weixin.exe)</ProcessHint>
+    <Add>추가</Add>
+    <BadName>폴더 경로를 제외한 실행 파일 이름을 입력하세요.</BadName>
+    <Help>스크롤 설정 도움말</Help>
+    <FineHelp>미세 스크롤은 움직임을 부드럽게 마무리합니다. 트레이 메뉴에서 켜거나 끌 수 있습니다.</FineHelp>
+    <DistanceTip>1배는 휠 한 칸의 원래 거리를 유지합니다.</DistanceTip>
+    <Fixed>고정값</Fixed>
+    <ShiftTip>Shift + 휠 입력은 해당 앱이 직접 처리합니다.</ShiftTip>
+    <CloseHint>창을 닫으면 트레이로 숨김</CloseHint>
+    <Running>SmoothFlow가 이미 실행 중입니다. 트레이 아이콘에서 설정을 여세요.</Running>
+    <StartupError>로그인 시 시작 설정을 저장할 수 없습니다</StartupError>
+    <OtherEngine>SmoothScroll을 종료한 후 SmoothFlow를 켜세요.</OtherEngine>
+    <AutoPaused>다른 스크롤 도구가 실행 중이어서 일시 중지했습니다.</AutoPaused>
+    <HookTimeout>마우스 입력 설정 시간이 초과되었습니다.</HookTimeout>
+    <HookError>마우스 입력을 초기화할 수 없습니다</HookError>
+    <InputError>마우스 입력 오류</InputError>
+    <ScrollError>오류로 스크롤이 일시 중지되었습니다</ScrollError>
+    <InputDenied>Windows가 스크롤 입력을 차단했습니다. 관리자 권한이 없는 창에서 시도하세요.</InputDenied>
+    <Waiting>창 대기 중</Waiting>
+    <Updating>앱 규칙 업데이트 중</Updating>
+    <Unknown>알 수 없는 앱</Unknown>
+    <Original>기본 스크롤</Original>
+  </language>
+  <language id="es">
+    <AutoStart>Iniciar al iniciar sesión</AutoStart>
+    <Enabled>Activado</Enabled>
+    <Paused>En pausa</Paused>
+    <Profile>Perfil de aplicación</Profile>
+    <DefaultProfile>Predeterminado (todas las aplicaciones)</DefaultProfile>
+    <Distance>Distancia de desplazamiento</Distance>
+    <Duration>Duración de la animación</Duration>
+    <AccelWindow>Intervalo de aceleración</AccelWindow>
+    <AccelMax>Aceleración máxima</AccelMax>
+    <Tail>Relación frenado/arranque</Tail>
+    <AllApps>Activar por defecto en todas las aplicaciones</AllApps>
+    <ThisApp>Activar para esta aplicación</ThisApp>
+    <Easing>Suavizar la animación</Easing>
+    <Shift>Desplazamiento horizontal con Mayús</Shift>
+    <Horizontal>Suavizar el desplazamiento horizontal</Horizontal>
+    <Reverse>Invertir el sentido de la rueda</Reverse>
+    <Reset>Restablecer todo</Reset>
+    <Fine>Pasos finos</Fine>
+    <Open>Abrir ajustes</Open>
+    <Toggle>Pausar o reanudar</Toggle>
+    <Quit>Salir</Quit>
+    <AddApp>Añadir aplicación</AddApp>
+    <RemoveApp>Eliminar perfil de aplicación</RemoveApp>
+    <ProcessHint>Nombre del proceso, p. ej. Weixin.exe</ProcessHint>
+    <Add>Añadir</Add>
+    <BadName>Introduce el nombre del ejecutable sin la ruta de la carpeta.</BadName>
+    <Help>Ajustes de desplazamiento</Help>
+    <FineHelp>Los pasos finos suavizan el final del desplazamiento. Puedes activarlos en el menú de la bandeja.</FineHelp>
+    <DistanceTip>1× conserva la distancia de un paso de rueda.</DistanceTip>
+    <Fixed>Valor fijo</Fixed>
+    <ShiftTip>La aplicación gestiona directamente Mayús + rueda.</ShiftTip>
+    <CloseHint>Al cerrar, se oculta en la bandeja</CloseHint>
+    <Running>SmoothFlow ya está en ejecución. Abre los ajustes desde su icono en la bandeja.</Running>
+    <StartupError>No se pudo guardar el ajuste de inicio de sesión</StartupError>
+    <OtherEngine>Cierra SmoothScroll antes de activar SmoothFlow.</OtherEngine>
+    <AutoPaused>En pausa porque hay otra utilidad de desplazamiento en ejecución.</AutoPaused>
+    <HookTimeout>Se agotó el tiempo para configurar la entrada del ratón.</HookTimeout>
+    <HookError>No se pudo inicializar la entrada del ratón</HookError>
+    <InputError>Error de entrada del ratón</InputError>
+    <ScrollError>Desplazamiento en pausa tras un error</ScrollError>
+    <InputDenied>Windows bloqueó el desplazamiento. Prueba en una ventana sin privilegios de administrador.</InputDenied>
+    <Waiting>Esperando una ventana</Waiting>
+    <Updating>Actualizando reglas</Updating>
+    <Unknown>Aplicación desconocida</Unknown>
+    <Original>Desplazamiento nativo</Original>
+  </language>
+  <language id="fr">
+    <AutoStart>Démarrer à la connexion</AutoStart>
+    <Enabled>Activé</Enabled>
+    <Paused>En pause</Paused>
+    <Profile>Profil d’application</Profile>
+    <DefaultProfile>Par défaut (toutes les applications)</DefaultProfile>
+    <Distance>Distance de défilement</Distance>
+    <Duration>Durée de l’animation</Duration>
+    <AccelWindow>Intervalle d’accélération</AccelWindow>
+    <AccelMax>Accélération maximale</AccelMax>
+    <Tail>Rapport décélération/accélération</Tail>
+    <AllApps>Activer par défaut pour toutes les applications</AllApps>
+    <ThisApp>Activer pour cette application</ThisApp>
+    <Easing>Adoucir l’animation</Easing>
+    <Shift>Défilement horizontal avec Maj</Shift>
+    <Horizontal>Défilement horizontal fluide</Horizontal>
+    <Reverse>Inverser le sens de la molette</Reverse>
+    <Reset>Tout réinitialiser</Reset>
+    <Fine>Pas fins</Fine>
+    <Open>Ouvrir les paramètres</Open>
+    <Toggle>Suspendre ou reprendre</Toggle>
+    <Quit>Quitter</Quit>
+    <AddApp>Ajouter une application</AddApp>
+    <RemoveApp>Supprimer le profil de l’application</RemoveApp>
+    <ProcessHint>Nom du processus, par ex. Weixin.exe</ProcessHint>
+    <Add>Ajouter</Add>
+    <BadName>Saisissez le nom du fichier exécutable sans le chemin du dossier.</BadName>
+    <Help>Paramètres de défilement</Help>
+    <FineHelp>Les pas fins adoucissent la fin du défilement. Activez-les dans le menu de la zone de notification.</FineHelp>
+    <DistanceTip>1× conserve la distance d’un cran de molette.</DistanceTip>
+    <Fixed>Valeur fixe</Fixed>
+    <ShiftTip>L’application gère directement Maj + molette.</ShiftTip>
+    <CloseHint>Fermer pour masquer dans la zone de notification</CloseHint>
+    <Running>SmoothFlow est déjà en cours d’exécution. Ouvrez les paramètres depuis son icône de notification.</Running>
+    <StartupError>Impossible d’enregistrer le réglage de démarrage</StartupError>
+    <OtherEngine>Quittez SmoothScroll avant d’activer SmoothFlow.</OtherEngine>
+    <AutoPaused>Défilement suspendu car un autre utilitaire est actif.</AutoPaused>
+    <HookTimeout>Délai dépassé lors de l’initialisation de la souris.</HookTimeout>
+    <HookError>Impossible d’initialiser la souris</HookError>
+    <InputError>Erreur de saisie de la souris</InputError>
+    <ScrollError>Défilement suspendu après une erreur</ScrollError>
+    <InputDenied>Windows a bloqué le défilement. Essayez dans une fenêtre sans droits d’administrateur.</InputDenied>
+    <Waiting>En attente d’une fenêtre</Waiting>
+    <Updating>Mise à jour des règles</Updating>
+    <Unknown>Application inconnue</Unknown>
+    <Original>Défilement natif</Original>
+  </language>
+  <language id="de">
+    <AutoStart>Bei Anmeldung starten</AutoStart>
+    <Enabled>Aktiviert</Enabled>
+    <Paused>Pausiert</Paused>
+    <Profile>Anwendungsprofil</Profile>
+    <DefaultProfile>Standard (alle Anwendungen)</DefaultProfile>
+    <Distance>Scrollstrecke</Distance>
+    <Duration>Animationsdauer</Duration>
+    <AccelWindow>Beschleunigungsintervall</AccelWindow>
+    <AccelMax>Maximale Beschleunigung</AccelMax>
+    <Tail>Verhältnis Auslauf/Anlauf</Tail>
+    <AllApps>Standardmäßig für alle Apps aktivieren</AllApps>
+    <ThisApp>Für diese Anwendung aktivieren</ThisApp>
+    <Easing>Sanftes Anlaufen und Auslaufen</Easing>
+    <Shift>Horizontal scrollen mit Umschalt</Shift>
+    <Horizontal>Horizontales Scrollen glätten</Horizontal>
+    <Reverse>Mausradrichtung umkehren</Reverse>
+    <Reset>Alles zurücksetzen</Reset>
+    <Fine>Feine Schritte</Fine>
+    <Open>Einstellungen öffnen</Open>
+    <Toggle>Pausieren oder fortsetzen</Toggle>
+    <Quit>Beenden</Quit>
+    <AddApp>Anwendung hinzufügen</AddApp>
+    <RemoveApp>Anwendungsprofil entfernen</RemoveApp>
+    <ProcessHint>Prozessname, z. B. Weixin.exe</ProcessHint>
+    <Add>Hinzufügen</Add>
+    <BadName>Geben Sie den Dateinamen ohne Ordnerpfad ein.</BadName>
+    <Help>Hilfe zum Scrollen</Help>
+    <FineHelp>Feine Schritte sorgen für ein sanftes Auslaufen. Sie lassen sich im Infobereich ein- und ausschalten.</FineHelp>
+    <DistanceTip>1× entspricht der Strecke einer Mausradrastung.</DistanceTip>
+    <Fixed>Fester Wert</Fixed>
+    <ShiftTip>Umschalt + Mausrad wird direkt an die Anwendung weitergegeben.</ShiftTip>
+    <CloseHint>Beim Schließen im Infobereich ausblenden</CloseHint>
+    <Running>SmoothFlow läuft bereits. Öffnen Sie die Einstellungen über das Symbol im Infobereich.</Running>
+    <StartupError>Autostart-Einstellung konnte nicht gespeichert werden</StartupError>
+    <OtherEngine>Beenden Sie SmoothScroll, bevor Sie SmoothFlow aktivieren.</OtherEngine>
+    <AutoPaused>Pausiert, weil ein anderes Scrollprogramm läuft.</AutoPaused>
+    <HookTimeout>Zeitüberschreitung beim Einrichten der Mauseingabe.</HookTimeout>
+    <HookError>Mauseingabe konnte nicht eingerichtet werden</HookError>
+    <InputError>Fehler bei der Mauseingabe</InputError>
+    <ScrollError>Scrollen nach einem Fehler pausiert</ScrollError>
+    <InputDenied>Windows hat die Scrolleingabe blockiert. Versuchen Sie es in einem Fenster ohne Administratorrechte.</InputDenied>
+    <Waiting>Warten auf ein Fenster</Waiting>
+    <Updating>Anwendungsregeln werden aktualisiert</Updating>
+    <Unknown>Unbekannte Anwendung</Unknown>
+    <Original>Normales Scrollen</Original>
+  </language>
+  <language id="pt">
+    <AutoStart>Iniciar com a sessão</AutoStart>
+    <Enabled>Ativado</Enabled>
+    <Paused>Em pausa</Paused>
+    <Profile>Perfil de aplicação</Profile>
+    <DefaultProfile>Padrão (todas as aplicações)</DefaultProfile>
+    <Distance>Distância de rolagem</Distance>
+    <Duration>Duração da animação</Duration>
+    <AccelWindow>Intervalo de aceleração</AccelWindow>
+    <AccelMax>Aceleração máxima</AccelMax>
+    <Tail>Relação desaceleração/aceleração</Tail>
+    <AllApps>Ativar por padrão em todas as aplicações</AllApps>
+    <ThisApp>Ativar para esta aplicação</ThisApp>
+    <Easing>Suavizar a animação</Easing>
+    <Shift>Rolagem horizontal com Shift</Shift>
+    <Horizontal>Suavizar a rolagem horizontal</Horizontal>
+    <Reverse>Inverter o sentido da roda</Reverse>
+    <Reset>Redefinir tudo</Reset>
+    <Fine>Passos finos</Fine>
+    <Open>Abrir configurações</Open>
+    <Toggle>Pausar ou retomar</Toggle>
+    <Quit>Sair</Quit>
+    <AddApp>Adicionar aplicação</AddApp>
+    <RemoveApp>Remover perfil da aplicação</RemoveApp>
+    <ProcessHint>Nome do processo, por exemplo Weixin.exe</ProcessHint>
+    <Add>Adicionar</Add>
+    <BadName>Digite o nome do executável sem o caminho da pasta.</BadName>
+    <Help>Configurações de rolagem</Help>
+    <FineHelp>Os passos finos suavizam o fim da rolagem. Use o menu da área de notificação para ativá-los.</FineHelp>
+    <DistanceTip>1× mantém a distância de um passo da roda.</DistanceTip>
+    <Fixed>Valor fixo</Fixed>
+    <ShiftTip>A aplicação trata diretamente de Shift + roda.</ShiftTip>
+    <CloseHint>Fechar para ocultar na área de notificação</CloseHint>
+    <Running>O SmoothFlow já está em execução. Abra as configurações pelo ícone na área de notificação.</Running>
+    <StartupError>Não foi possível salvar a configuração de início</StartupError>
+    <OtherEngine>Feche o SmoothScroll antes de ativar o SmoothFlow.</OtherEngine>
+    <AutoPaused>Em pausa porque outro utilitário de rolagem está em execução.</AutoPaused>
+    <HookTimeout>Tempo esgotado ao configurar a entrada do mouse.</HookTimeout>
+    <HookError>Não foi possível iniciar a entrada do mouse</HookError>
+    <InputError>Erro de entrada do mouse</InputError>
+    <ScrollError>Rolagem pausada após um erro</ScrollError>
+    <InputDenied>O Windows bloqueou a rolagem. Tente uma janela sem privilégios de administrador.</InputDenied>
+    <Waiting>Aguardando uma janela</Waiting>
+    <Updating>Atualizando regras</Updating>
+    <Unknown>Aplicação desconhecida</Unknown>
+    <Original>Rolagem nativa</Original>
+  </language>
+  <language id="it">
+    <AutoStart>Avvia all’accesso</AutoStart>
+    <Enabled>Attivo</Enabled>
+    <Paused>In pausa</Paused>
+    <Profile>Profilo applicazione</Profile>
+    <DefaultProfile>Predefinito (tutte le applicazioni)</DefaultProfile>
+    <Distance>Distanza di scorrimento</Distance>
+    <Duration>Durata animazione</Duration>
+    <AccelWindow>Intervallo di accelerazione</AccelWindow>
+    <AccelMax>Accelerazione massima</AccelMax>
+    <Tail>Rapporto frenata/avvio</Tail>
+    <AllApps>Attiva per tutte le app per impostazione predefinita</AllApps>
+    <ThisApp>Attiva per questa applicazione</ThisApp>
+    <Easing>Avvio e arresto graduali</Easing>
+    <Shift>Scorrimento orizzontale con Maiusc</Shift>
+    <Horizontal>Scorrimento orizzontale fluido</Horizontal>
+    <Reverse>Inverti direzione della rotella</Reverse>
+    <Reset>Ripristina tutto</Reset>
+    <Fine>Passi fini</Fine>
+    <Open>Apri impostazioni</Open>
+    <Toggle>Pausa o riprendi</Toggle>
+    <Quit>Esci</Quit>
+    <AddApp>Aggiungi applicazione</AddApp>
+    <RemoveApp>Rimuovi profilo applicazione</RemoveApp>
+    <ProcessHint>Nome del processo, ad es. Weixin.exe</ProcessHint>
+    <Add>Aggiungi</Add>
+    <BadName>Inserisci il nome dell’eseguibile senza il percorso della cartella.</BadName>
+    <Help>Impostazioni di scorrimento</Help>
+    <FineHelp>I passi fini rendono più dolce la fine dello scorrimento. Puoi attivarli dal menu dell’area di notifica.</FineHelp>
+    <DistanceTip>1× mantiene la distanza di uno scatto della rotella.</DistanceTip>
+    <Fixed>Valore fisso</Fixed>
+    <ShiftTip>L’applicazione gestisce direttamente Maiusc + rotella.</ShiftTip>
+    <CloseHint>Chiudi per nascondere nell’area di notifica</CloseHint>
+    <Running>SmoothFlow è già in esecuzione. Apri le impostazioni dall’icona nell’area di notifica.</Running>
+    <StartupError>Impossibile salvare l’impostazione di avvio</StartupError>
+    <OtherEngine>Chiudi SmoothScroll prima di attivare SmoothFlow.</OtherEngine>
+    <AutoPaused>In pausa perché è attiva un’altra utilità di scorrimento.</AutoPaused>
+    <HookTimeout>Tempo scaduto durante la configurazione del mouse.</HookTimeout>
+    <HookError>Impossibile inizializzare il mouse</HookError>
+    <InputError>Errore di input del mouse</InputError>
+    <ScrollError>Scorrimento in pausa dopo un errore</ScrollError>
+    <InputDenied>Windows ha bloccato lo scorrimento. Prova in una finestra senza privilegi di amministratore.</InputDenied>
+    <Waiting>In attesa di una finestra</Waiting>
+    <Updating>Aggiornamento regole</Updating>
+    <Unknown>Applicazione sconosciuta</Unknown>
+    <Original>Scorrimento nativo</Original>
+  </language>
+  <language id="ru">
+    <AutoStart>Запуск при входе</AutoStart>
+    <Enabled>Включено</Enabled>
+    <Paused>Приостановлено</Paused>
+    <Profile>Профиль приложения</Profile>
+    <DefaultProfile>По умолчанию (все приложения)</DefaultProfile>
+    <Distance>Длина прокрутки</Distance>
+    <Duration>Длительность анимации</Duration>
+    <AccelWindow>Интервал ускорения</AccelWindow>
+    <AccelMax>Максимальное ускорение</AccelMax>
+    <Tail>Отношение торможения к разгону</Tail>
+    <AllApps>Включать для всех приложений по умолчанию</AllApps>
+    <ThisApp>Включить для этого приложения</ThisApp>
+    <Easing>Плавный разгон и торможение</Easing>
+    <Shift>Горизонтальная прокрутка с Shift</Shift>
+    <Horizontal>Плавная горизонтальная прокрутка</Horizontal>
+    <Reverse>Обратное направление прокрутки</Reverse>
+    <Reset>Сбросить всё</Reset>
+    <Fine>Мелкие шаги</Fine>
+    <Open>Открыть настройки</Open>
+    <Toggle>Пауза или продолжение</Toggle>
+    <Quit>Выход</Quit>
+    <AddApp>Добавить приложение</AddApp>
+    <RemoveApp>Удалить профиль приложения</RemoveApp>
+    <ProcessHint>Имя процесса, например Weixin.exe</ProcessHint>
+    <Add>Добавить</Add>
+    <BadName>Введите имя исполняемого файла без пути к папке.</BadName>
+    <Help>Настройки прокрутки</Help>
+    <FineHelp>Мелкие шаги смягчают конец прокрутки. Их можно включить в меню значка в области уведомлений.</FineHelp>
+    <DistanceTip>При 1× сохраняется расстояние одного шага колеса.</DistanceTip>
+    <Fixed>Фиксированное значение</Fixed>
+    <ShiftTip>Сочетание Shift с колесом обрабатывает само приложение.</ShiftTip>
+    <CloseHint>При закрытии сворачивается в область уведомлений</CloseHint>
+    <Running>SmoothFlow уже запущен. Откройте настройки через значок в области уведомлений.</Running>
+    <StartupError>Не удалось сохранить настройку автозапуска</StartupError>
+    <OtherEngine>Закройте SmoothScroll перед включением SmoothFlow.</OtherEngine>
+    <AutoPaused>Прокрутка приостановлена: работает другая утилита прокрутки.</AutoPaused>
+    <HookTimeout>Истекло время ожидания настройки ввода мыши.</HookTimeout>
+    <HookError>Не удалось настроить ввод мыши</HookError>
+    <InputError>Ошибка ввода мыши</InputError>
+    <ScrollError>Прокрутка приостановлена из-за ошибки</ScrollError>
+    <InputDenied>Windows заблокировала прокрутку. Попробуйте окно без прав администратора.</InputDenied>
+    <Waiting>Ожидание окна</Waiting>
+    <Updating>Обновление правил</Updating>
+    <Unknown>Неизвестное приложение</Unknown>
+    <Original>Обычная прокрутка</Original>
+  </language>
+</languages>

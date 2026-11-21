@@ -93,6 +93,12 @@ internal static class Tests {
   m.Clear();s.Distance=2;m.Add(120,false,new IntPtr(1),0,s);Check(Sum(m,450)==240,"distance multiplier remains adjustable");
   Settings cfg=new Settings{DefaultEnabled=false};cfg.Profiles.Add(new AppProfile{ProcessName="Weixin",Distance=2,Enabled=true});Check(cfg.Allows("Weixin.exe",false)&&!cfg.Allows("notepad",false),"keep per-app enable rules");Settings copy=cfg.Snapshot();cfg.Profiles[0].Distance=3;Check(copy.OptionsFor("Weixin").Distance==2,"keep isolated per-app parameters");
   s.Distance=Double.NaN;s.AccelerationMax=7;s.Duration=-1;s.TailRatio=3;s.AccelerationDelta=70;s.ShiftHorizontal=true;s.Validate();Check(s.Distance==1&&s.AccelerationMax==3&&s.Duration==80&&s.TailRatio==4&&s.AccelerationDelta==180&&!s.ShiftHorizontal,"unsupported 0.3 options cannot change restored engine");Check(Marshal.SizeOf(typeof(Native.Input))==40,"x64 INPUT ABI");
+  UiText.CheckCatalogs();
+  Check(true,"all embedded UI catalogs have complete nonempty strings");
+  string[] cultures={"en-US","zh-CN","zh-SG","zh-TW","zh-HK","zh-MO","ja-JP","ko-KR","es-MX","fr-CA","de-AT","pt-BR","pt-PT","it-IT","ru-RU","nl-NL",""};
+  string[] expected={"en","zh-Hans","zh-Hans","zh-Hant","zh-Hant","zh-Hant","ja","ko","es","fr","de","pt","pt","it","ru","en","en"};
+  for(int i=0;i<cultures.Length;i++)
+   Check(UiText.Resolve(CultureInfo.GetCultureInfo(cultures[i]))==expected[i],"UI language fallback for "+cultures[i]);
   CheckFineSteps();
   CheckTail(380,287.5);
   CheckTail(430,325);

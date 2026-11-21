@@ -2,11 +2,15 @@
 
 # SmoothFlow
 
-English · [简体中文](README.zh-CN.md)
+English · [Simplified Chinese](README.zh-CN.md)
 
 SmoothFlow is an open-source smooth scrolling utility for physical mouse wheels on Windows 10 and 11 (x64). It turns each wheel notch into a series of smaller scroll events so a page eases into motion and slows to a stop. You can tune the distance, duration, and acceleration for each application.
 
-**[Download SmoothFlow for Windows x64](https://github.com/cmshmvp/SmoothFlow/releases/download/v0.3.3/SmoothFlow-0.3.3-win-x64.zip)** · [Release notes and checksums](https://github.com/cmshmvp/SmoothFlow/releases)
+**[Download SmoothFlow for Windows x64](https://github.com/cmshmvp/SmoothFlow/releases/download/v0.4.0/SmoothFlow-0.4.0-win-x64.zip)** · [Release notes and checksums](https://github.com/cmshmvp/SmoothFlow/releases)
+
+## Interface language
+
+At startup, SmoothFlow follows your Windows display language. The settings window, tray menu, help, and notifications are available in English, Simplified Chinese, Traditional Chinese, Japanese, Korean, Spanish, French, German, Portuguese, Italian, and Russian. Other display languages use English. After changing the Windows display language, quit SmoothFlow from the tray and reopen it.
 
 ## Getting started
 
@@ -14,7 +18,7 @@ SmoothFlow is an open-source smooth scrolling utility for physical mouse wheels 
 2. With **Enabled** checked, move the pointer over a scrollable page and turn the wheel one notch. **Reverse wheel direction** is on by default. Clear it if you prefer your usual wheel direction.
 3. Close the settings window to send SmoothFlow to the system tray. Double-click its tray icon to reopen settings. Press **Ctrl+Alt+S** to pause or resume.
 
-**Auto start on login** is on by default. Clear it to disable startup. SmoothFlow saves settings in `settings.xml` next to the executable. To uninstall, disable login startup, choose **退出** (Quit) from the tray menu, then delete the extracted folder.
+**Start on login** is on by default. Clear it to disable startup. SmoothFlow saves settings in `settings.xml` next to the executable. To uninstall, disable login startup, choose **Quit** from the tray menu, then delete the extracted folder.
 
 ## Tuning the wheel
 
@@ -22,9 +26,9 @@ SmoothFlow is an open-source smooth scrolling utility for physical mouse wheels 
 | --- | --- | --- |
 | Scroll distance | 1.00× | Total travel per wheel notch |
 | Animation time | 380 ms | Duration of the scrolling motion. Increase it for a longer glide. |
-| Acceleration max | 1.3× | Maximum boost when you turn the wheel repeatedly |
+| Maximum acceleration | 1.3× | Maximum boost when you turn the wheel repeatedly |
 | Animation easing | On | Gradual acceleration at the start and deceleration near the end |
-| Fine steps (tray menu, **细步进**) | On | The timing of small wheel increments. This reduces the pause before the final movement. |
+| Fine steps (tray menu) | On | The timing of small wheel increments. This reduces the pause before the final movement. |
 
 Use **+** in the settings window to add a profile by process name. For example, to give WeChat chat history a longer glide, add `Weixin.exe` and increase **Animation time** for that profile. The final scrolling behavior depends on how the receiving application handles small wheel increments.
 
