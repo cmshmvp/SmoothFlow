@@ -6,11 +6,11 @@
 
 SmoothFlow 是一个为 Windows 有刻度鼠标滚轮设计的托盘工具。轻拨一格，页面会逐渐起步、减速并停下；连续拨动时，可以用加速上限控制翻阅长页面的速度。
 
-**[下载 Windows x64 便携版](https://github.com/cmshmvp/SmoothFlow/releases/download/v0.4.0/SmoothFlow-0.4.0-win-x64.zip)** · [所有版本](https://github.com/cmshmvp/SmoothFlow/releases)
+**[下载 SmoothFlow 0.5.0 Windows x64 便携版](https://github.com/cmshmvp/SmoothFlow/releases/download/v0.5.0/SmoothFlow-0.5.0-win-x64.zip)** · [所有版本](https://github.com/cmshmvp/SmoothFlow/releases)
 
 ## 界面语言
 
-SmoothFlow 启动时跟随 Windows 显示语言。设置窗口、托盘菜单、帮助和提示支持英语、简体中文、繁体中文、日语、韩语、西班牙语、法语、德语、葡萄牙语、意大利语和俄语。其他显示语言使用英语。更改 Windows 显示语言后，从托盘退出并重新打开 SmoothFlow 即可。
+在设置窗口左侧的 **界面语言** 下拉框中可选择「跟随系统」（默认）或直接选择语言。选择立即生效，下次打开也会记住。设置窗口、托盘菜单、帮助和提示支持英语、简体中文、繁体中文、日语、韩语、西班牙语、法语、德语、葡萄牙语、意大利语和俄语。其他显示语言使用英语。更改 Windows 显示语言后，从托盘退出并重新打开 SmoothFlow 即可。
 
 ## 开始使用
 
@@ -30,7 +30,7 @@ SmoothFlow 启动时跟随 Windows 显示语言。设置窗口、托盘菜单、
 | 动画缓动 | 开 | 让滚动逐渐起步、减速收尾 |
 | 托盘菜单「细步进」 | 开 | 细分输出，减少慢滚结束时隔一会儿又挪一下的感觉 |
 
-主窗口的 **+** 可以按进程名添加应用配置。例如，只想让微信聊天记录滑得久一点，可以给 `Weixin.exe` 单独调高动画时长。应用如何处理小幅滚轮输入，也会影响最终的画面效果。
+应用配置旁的 **添加** 按钮 可以按进程名添加应用配置。例如，只想让微信聊天记录滑得久一点，可以给 `Weixin.exe` 单独调高动画时长。应用如何处理小幅滚轮输入，也会影响最终的画面效果。
 
 ## 兼容性
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <languages>
-  <language id="en">
+  <language id="en" native="English">
     <AutoStart>Start on login</AutoStart>
     <Enabled>Enabled</Enabled>
     <Paused>Paused</Paused>
@@ -46,8 +46,13 @@
     <Updating>Updating application rules</Updating>
     <Unknown>Unknown application</Unknown>
     <Original>Native scrolling</Original>
+    <LanguageLabel>Language</LanguageLabel>
+    <SystemLanguage>Use system language</SystemLanguage>
+    <General>General</General>
+    <Motion>Scrolling</Motion>
+    <Remove>Remove</Remove>
   </language>
-  <language id="zh-Hans">
+  <language id="zh-Hans" native="简体中文">
     <AutoStart>登录时启动</AutoStart>
     <Enabled>已启用</Enabled>
     <Paused>已暂停</Paused>
@@ -93,8 +98,13 @@
     <Updating>正在更新应用规则</Updating>
     <Unknown>未知应用</Unknown>
     <Original>原始滚动</Original>
+    <LanguageLabel>界面语言</LanguageLabel>
+    <SystemLanguage>跟随系统</SystemLanguage>
+    <General>常规设置</General>
+    <Motion>滚动手感</Motion>
+    <Remove>移除</Remove>
   </language>
-  <language id="zh-Hant">
+  <language id="zh-Hant" native="繁體中文">
     <AutoStart>登入時啟動</AutoStart>
     <Enabled>已啟用</Enabled>
     <Paused>已暫停</Paused>
@@ -140,8 +150,13 @@
     <Updating>正在更新應用程式規則</Updating>
     <Unknown>未知應用程式</Unknown>
     <Original>原生捲動</Original>
+    <LanguageLabel>介面語言</LanguageLabel>
+    <SystemLanguage>跟隨系統</SystemLanguage>
+    <General>一般設定</General>
+    <Motion>捲動手感</Motion>
+    <Remove>移除</Remove>
   </language>
-  <language id="ja">
+  <language id="ja" native="日本語">
     <AutoStart>ログイン時に起動</AutoStart>
     <Enabled>有効</Enabled>
     <Paused>一時停止中</Paused>
@@ -187,8 +202,13 @@
     <Updating>アプリのルールを更新中</Updating>
     <Unknown>不明なアプリ</Unknown>
     <Original>標準スクロール</Original>
+    <LanguageLabel>表示言語</LanguageLabel>
+    <SystemLanguage>システムの言語を使う</SystemLanguage>
+    <General>一般設定</General>
+    <Motion>スクロール</Motion>
+    <Remove>削除</Remove>
   </language>
-  <language id="ko">
+  <language id="ko" native="한국어">
     <AutoStart>로그인 시 시작</AutoStart>
     <Enabled>사용 중</Enabled>
     <Paused>일시 중지됨</Paused>
@@ -234,8 +254,13 @@
     <Updating>앱 규칙 업데이트 중</Updating>
     <Unknown>알 수 없는 앱</Unknown>
     <Original>기본 스크롤</Original>
+    <LanguageLabel>표시 언어</LanguageLabel>
+    <SystemLanguage>시스템 언어 사용</SystemLanguage>
+    <General>일반 설정</General>
+    <Motion>스크롤</Motion>
+    <Remove>삭제</Remove>
   </language>
-  <language id="es">
+  <language id="es" native="Español">
     <AutoStart>Iniciar al iniciar sesión</AutoStart>
     <Enabled>Activado</Enabled>
     <Paused>En pausa</Paused>
@@ -281,8 +306,13 @@
     <Updating>Actualizando reglas</Updating>
     <Unknown>Aplicación desconocida</Unknown>
     <Original>Desplazamiento nativo</Original>
+    <LanguageLabel>Idioma</LanguageLabel>
+    <SystemLanguage>Usar el idioma del sistema</SystemLanguage>
+    <General>General</General>
+    <Motion>Desplazamiento</Motion>
+    <Remove>Quitar</Remove>
   </language>
-  <language id="fr">
+  <language id="fr" native="Français">
     <AutoStart>Démarrer à la connexion</AutoStart>
     <Enabled>Activé</Enabled>
     <Paused>En pause</Paused>
@@ -328,8 +358,13 @@
     <Updating>Mise à jour des règles</Updating>
     <Unknown>Application inconnue</Unknown>
     <Original>Défilement natif</Original>
+    <LanguageLabel>Langue</LanguageLabel>
+    <SystemLanguage>Langue du système</SystemLanguage>
+    <General>Général</General>
+    <Motion>Défilement</Motion>
+    <Remove>Retirer</Remove>
   </language>
-  <language id="de">
+  <language id="de" native="Deutsch">
     <AutoStart>Bei Anmeldung starten</AutoStart>
     <Enabled>Aktiviert</Enabled>
     <Paused>Pausiert</Paused>
@@ -375,8 +410,13 @@
     <Updating>Anwendungsregeln werden aktualisiert</Updating>
     <Unknown>Unbekannte Anwendung</Unknown>
     <Original>Normales Scrollen</Original>
+    <LanguageLabel>Sprache</LanguageLabel>
+    <SystemLanguage>Systemsprache verwenden</SystemLanguage>
+    <General>Allgemein</General>
+    <Motion>Scrollverhalten</Motion>
+    <Remove>Entfernen</Remove>
   </language>
-  <language id="pt">
+  <language id="pt" native="Português">
     <AutoStart>Iniciar com a sessão</AutoStart>
     <Enabled>Ativado</Enabled>
     <Paused>Em pausa</Paused>
@@ -422,8 +462,13 @@
     <Updating>Atualizando regras</Updating>
     <Unknown>Aplicação desconhecida</Unknown>
     <Original>Rolagem nativa</Original>
+    <LanguageLabel>Idioma</LanguageLabel>
+    <SystemLanguage>Usar idioma do sistema</SystemLanguage>
+    <General>Geral</General>
+    <Motion>Rolagem</Motion>
+    <Remove>Remover</Remove>
   </language>
-  <language id="it">
+  <language id="it" native="Italiano">
     <AutoStart>Avvia all’accesso</AutoStart>
     <Enabled>Attivo</Enabled>
     <Paused>In pausa</Paused>
@@ -469,8 +514,13 @@
     <Updating>Aggiornamento regole</Updating>
     <Unknown>Applicazione sconosciuta</Unknown>
     <Original>Scorrimento nativo</Original>
+    <LanguageLabel>Lingua</LanguageLabel>
+    <SystemLanguage>Usa la lingua di sistema</SystemLanguage>
+    <General>Generali</General>
+    <Motion>Scorrimento</Motion>
+    <Remove>Rimuovi</Remove>
   </language>
-  <language id="ru">
+  <language id="ru" native="Русский">
     <AutoStart>Запуск при входе</AutoStart>
     <Enabled>Включено</Enabled>
     <Paused>Приостановлено</Paused>
@@ -516,5 +566,10 @@
     <Updating>Обновление правил</Updating>
     <Unknown>Неизвестное приложение</Unknown>
     <Original>Обычная прокрутка</Original>
+    <LanguageLabel>Язык</LanguageLabel>
+    <SystemLanguage>Язык системы</SystemLanguage>
+    <General>Основные</General>
+    <Motion>Прокрутка</Motion>
+    <Remove>Удалить</Remove>
   </language>
 </languages>

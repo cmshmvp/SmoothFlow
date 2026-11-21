@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -19,6 +19,7 @@ internal sealed class ScrollService : IDisposable {
     volatile Policy policy = new Policy {Name=UiText.Get("Waiting")};
     volatile bool enabled, closing;
     volatile string fault = "";
+    volatile string faultDetail = "";
     volatile string notice = "";
     IntPtr hook;
     uint hookThreadId;
@@ -28,8 +29,8 @@ internal sealed class ScrollService : IDisposable {
     readonly int ownPid=Process.GetCurrentProcess().Id;
     internal IntPtr DemoWindow=IntPtr.Zero;
     internal bool Enabled {get {return enabled;} }
-    internal string Fault {get {return fault;} }
-    internal string Notice {get {return notice;} }
+    internal string Fault {get {string key=fault;return key.Length==0?"":UiText.Get(key)+(faultDetail.Length==0?"":" · "+faultDetail);} }
+    internal string Notice {get {string key=notice;return key.Length==0?"":UiText.Get(key);} }
     internal string TargetName {get {return policy.Name;} }
     internal int OutputCount {get {return Interlocked.CompareExchange(ref outputCount,0,0);} }
     internal int InputCount {get {return Interlocked.CompareExchange(ref inputCount,0,0);} }
@@ -39,7 +40,7 @@ internal sealed class ScrollService : IDisposable {
         worker=new Thread(WorkerLoop); worker.IsBackground=true; worker.Name="SmoothFlow animation";
         policyWorker=new Thread(PolicyLoop);policyWorker.IsBackground=true;policyWorker.Name="SmoothFlow application rules";
         hookThread.Start(); worker.Start();policyWorker.Start();
-        if(!ready.WaitOne(4000)) fault=UiText.Get("HookTimeout");
+        if(!ready.WaitOne(4000)) fault="HookTimeout";
     }
     internal void Configure(Settings s) {
         lock(gate) {
@@ -64,10 +65,10 @@ internal sealed class ScrollService : IDisposable {
             using(Control queueOwner=new Control()) {
                 IntPtr ignored=queueOwner.Handle;
                 hook=Native.SetWindowsHookEx(14,callback,Native.GetModuleHandle(null),0);
-                if(hook==IntPtr.Zero) { fault=UiText.Get("HookError")+" · "+Marshal.GetLastWin32Error(); return; }
+                if(hook==IntPtr.Zero) { faultDetail=Marshal.GetLastWin32Error().ToString();fault="HookError"; return; }
                 ready.Set(); Application.Run();
             }
-        } catch(Exception ex) { fault=UiText.Get("InputError")+" · "+ex.Message; enabled=false; }
+        } catch(Exception ex) { faultDetail=ex.Message;fault="InputError"; enabled=false; }
         finally { ready.Set(); if(hook!=IntPtr.Zero) {Native.UnhookWindowsHookEx(hook); hook=IntPtr.Zero;} }
     }
     IntPtr OnMouse(int code, IntPtr message, IntPtr data) {
@@ -97,7 +98,7 @@ internal sealed class ScrollService : IDisposable {
                     Interlocked.Increment(ref inputCount); wake.Set(); return new IntPtr(1);
                 }
             }
-        } catch(Exception ex) { fault=UiText.Get("InputError")+" · "+ex.Message; enabled=false; Cancel(); }
+        } catch(Exception ex) { faultDetail=ex.Message;fault="InputError"; enabled=false; Cancel(); }
         return Native.CallNextHookEx(hook,code,message,data);
     }
     void RefreshPolicy() {
@@ -121,7 +122,7 @@ internal sealed class ScrollService : IDisposable {
                     foreach(string name in new string[]{"SmoothScroll","smoothscroll-app"}) {
                         Process[] other=Process.GetProcessesByName(name);bool present=other.Length>0;
                         foreach(Process p in other)p.Dispose();
-                        if(present){enabled=false;Cancel();notice=UiText.Get("AutoPaused");break;}
+                        if(present){enabled=false;Cancel();notice="AutoPaused";break;}
                     }
                 }
             }catch { }
@@ -156,11 +157,11 @@ internal sealed class ScrollService : IDisposable {
                 nextFrame=FramePacer.FollowingDeadline(nextFrame,clock.Elapsed.TotalMilliseconds,period);
             }
             }
-        } catch(Exception ex) {fault=UiText.Get("ScrollError")+" · "+ex.Message;enabled=false;}
+        } catch(Exception ex) {faultDetail=ex.Message;fault="ScrollError";enabled=false;}
         finally {if(timerResolution) Native.timeEndPeriod(1);}
     }
     void Send(int delta,bool horizontal) {
-        if(!Native.Inject(delta,horizontal)) {fault=UiText.Get("InputDenied");enabled=false;Cancel();}
+        if(!Native.Inject(delta,horizontal)) {fault="InputDenied";enabled=false;Cancel();}
         else Interlocked.Increment(ref outputCount);
     }
     public void Dispose() {

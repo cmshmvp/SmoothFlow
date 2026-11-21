@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
@@ -12,6 +12,7 @@ public class ScrollOptions {
 public class AppProfile:ScrollOptions {public string ProcessName="";public AppProfile Duplicate(){return (AppProfile)MemberwiseClone();}}
 public class Settings:ScrollOptions {
  public bool FineSteps=true;
+ public string InterfaceLanguage="auto";
  public int SchemaVersion=4;public bool AutoStart=true,DefaultEnabled=true;public string Excluded="mstsc;parsecd;moonlight;gamebar;vmware;virtualboxvm";public List<AppProfile> Profiles=new List<AppProfile>();
  internal static readonly string FilePath=Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"settings.xml");
  public Settings Snapshot(){Settings s=(Settings)MemberwiseClone();s.Profiles=new List<AppProfile>();foreach(AppProfile p in Profiles)s.Profiles.Add(p.Duplicate());return s;}

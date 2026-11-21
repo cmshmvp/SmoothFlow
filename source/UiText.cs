@@ -6,8 +6,20 @@ using System.Xml;
 
 namespace SmoothFlow {
 internal static class UiText {
+    static readonly List<KeyValuePair<string,string>> choices = new List<KeyValuePair<string,string>>();
     static readonly Dictionary<string, Dictionary<string, string>> catalogs = Load();
-    internal static readonly string Language = Resolve(CultureInfo.CurrentUICulture);
+    internal static volatile string Language = Resolve(CultureInfo.CurrentUICulture);
+    internal static IEnumerable<KeyValuePair<string,string>> Choices {get {return choices;}}
+
+    internal static string SelectLanguage(string preference) {
+        foreach (var choice in choices)
+            if (String.Equals(preference, choice.Key, StringComparison.OrdinalIgnoreCase)) {
+                Language=choice.Key;
+                return choice.Key;
+            }
+        Language=Resolve(CultureInfo.CurrentUICulture);
+        return "auto";
+    }
 
     static Dictionary<string, Dictionary<string, string>> Load() {
         var result = new Dictionary<string, Dictionary<string, string>>(StringComparer.OrdinalIgnoreCase);
@@ -19,6 +31,7 @@ internal static class UiText {
             foreach (XmlElement message in language.ChildNodes)
                 messages.Add(message.Name, message.InnerText);
             result.Add(language.GetAttribute("id"), messages);
+            choices.Add(new KeyValuePair<string,string>(language.GetAttribute("id"),language.GetAttribute("native")));
         }
         return result;
     }

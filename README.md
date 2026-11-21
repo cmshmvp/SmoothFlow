@@ -6,11 +6,11 @@ English · [Simplified Chinese](README.zh-CN.md)
 
 SmoothFlow is an open-source smooth scrolling utility for physical mouse wheels on Windows 10 and 11 (x64). It turns each wheel notch into a series of smaller scroll events so a page eases into motion and slows to a stop. You can tune the distance, duration, and acceleration for each application.
 
-**[Download SmoothFlow for Windows x64](https://github.com/cmshmvp/SmoothFlow/releases/download/v0.4.0/SmoothFlow-0.4.0-win-x64.zip)** · [Release notes and checksums](https://github.com/cmshmvp/SmoothFlow/releases)
+**[Download SmoothFlow 0.5.0 for Windows x64](https://github.com/cmshmvp/SmoothFlow/releases/download/v0.5.0/SmoothFlow-0.5.0-win-x64.zip)** · [Release notes and checksums](https://github.com/cmshmvp/SmoothFlow/releases)
 
 ## Interface language
 
-At startup, SmoothFlow follows your Windows display language. The settings window, tray menu, help, and notifications are available in English, Simplified Chinese, Traditional Chinese, Japanese, Korean, Spanish, French, German, Portuguese, Italian, and Russian. Other display languages use English. After changing the Windows display language, quit SmoothFlow from the tray and reopen it.
+Use **Language** in the left sidebar to choose a language by its native name. Changes apply immediately and are saved for the next launch. **Use system language** is the default. The settings window, tray menu, help, and notifications are available in English, Simplified Chinese, Traditional Chinese, Japanese, Korean, Spanish, French, German, Portuguese, Italian, and Russian. Other display languages use English. After changing the Windows display language, quit SmoothFlow from the tray and reopen it.
 
 ## Getting started
 
@@ -30,7 +30,7 @@ At startup, SmoothFlow follows your Windows display language. The settings windo
 | Animation easing | On | Gradual acceleration at the start and deceleration near the end |
 | Fine steps (tray menu) | On | The timing of small wheel increments. This reduces the pause before the final movement. |
 
-Use **+** in the settings window to add a profile by process name. For example, to give WeChat chat history a longer glide, add `Weixin.exe` and increase **Animation time** for that profile. The final scrolling behavior depends on how the receiving application handles small wheel increments.
+Use **Add** beside the application profile to add a profile by process name. For example, to give WeChat chat history a longer glide, add `Weixin.exe` and increase **Animation time** for that profile. The final scrolling behavior depends on how the receiving application handles small wheel increments.
 
 ## Compatibility
 
