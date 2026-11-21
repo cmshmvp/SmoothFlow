@@ -6,7 +6,7 @@ $dist = Join-Path $root 'dist'
 [void][IO.Directory]::CreateDirectory($dist)
 $name = 'SmoothFlow-0.3.3-win-x64.zip'
 $archive = Join-Path $dist $name
-$files = @('SmoothFlow.exe', 'LICENSE', 'README.md', 'assets/SmoothFlow-icon.png', 'tests/legacy-0.2-trace.csv')
+$files = @('SmoothFlow.exe', 'LICENSE', 'README.md', 'README.zh-CN.md', 'assets/SmoothFlow-icon.png', 'tests/legacy-0.2-trace.csv')
 Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $stream = [IO.File]::Create($archive)

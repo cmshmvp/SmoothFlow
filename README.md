@@ -1,49 +1,51 @@
-<img src="assets/SmoothFlow-icon.png" alt="SmoothFlow 鼠标滚轮图标" width="72" height="72">
+<img src="assets/SmoothFlow-icon.png" alt="SmoothFlow mouse wheel icon" width="72" height="72">
 
 # SmoothFlow
 
-SmoothFlow 是一个为 Windows 有刻度鼠标滚轮设计的托盘工具。轻拨一格，页面会逐渐起步、减速并停下；连续拨动时，可以用加速上限控制翻阅长页面的速度。
+English · [简体中文](README.zh-CN.md)
 
-**[下载 Windows x64 便携版](https://github.com/cmshmvp/SmoothFlow/releases/download/v0.3.3/SmoothFlow-0.3.3-win-x64.zip)** · [所有版本](https://github.com/cmshmvp/SmoothFlow/releases)
+SmoothFlow is an open-source smooth scrolling utility for physical mouse wheels on Windows 10 and 11 (x64). It turns each wheel notch into a series of smaller scroll events so a page eases into motion and slows to a stop. You can tune the distance, duration, and acceleration for each application.
 
-## 开始使用
+**[Download SmoothFlow for Windows x64](https://github.com/cmshmvp/SmoothFlow/releases/download/v0.3.3/SmoothFlow-0.3.3-win-x64.zip)** · [Release notes and checksums](https://github.com/cmshmvp/SmoothFlow/releases)
 
-1. 把 ZIP 完整解压到一个可写、准备长期保留的文件夹，运行 `SmoothFlow.exe`。
-2. 确认窗口顶部的 **Enabled** 已勾选，把指针移到要阅读的页面上，轻拨滚轮。首次运行默认开启反向滚动，习惯传统滚轮方向时可取消 **Reverse wheel direction**。
-3. 点窗口右上角的叉会收起到系统托盘。双击托盘图标可重新打开设置，按 **Ctrl+Alt+S** 可随时暂停或恢复。
+## Getting started
 
-首次运行默认开启 **Auto start on login**。取消勾选即可关闭登录启动。设置保存在程序旁的 `settings.xml`。卸载时先取消登录启动，从托盘菜单选择「退出」，再删除解压目录。
+1. Extract the entire ZIP to a writable folder where you want to keep the app. Run `SmoothFlow.exe`.
+2. With **Enabled** checked, move the pointer over a scrollable page and turn the wheel one notch. **Reverse wheel direction** is on by default. Clear it if you prefer your usual wheel direction.
+3. Close the settings window to send SmoothFlow to the system tray. Double-click its tray icon to reopen settings. Press **Ctrl+Alt+S** to pause or resume.
 
-## 调整手感
+**Auto start on login** is on by default. Clear it to disable startup. SmoothFlow saves settings in `settings.xml` next to the executable. To uninstall, disable login startup, choose **退出** (Quit) from the tray menu, then delete the extracted folder.
 
-| 设置 | 默认值 | 作用 |
+## Tuning the wheel
+
+| Setting | Default | What it controls |
 | --- | --- | --- |
-| Scroll distance | 1.00 倍 | 每拨一格的总滚动量 |
-| Animation time | 380 ms | 分配这段位移的时间；数值越大，滑行越舒展 |
-| Acceleration max | 1.3 倍 | 连续快速拨轮时的加速上限 |
-| Animation easing | 开 | 让滚动逐渐起步、减速收尾 |
-| 托盘菜单「细步进」 | 开 | 细分输出，减少慢滚结束时隔一会儿又挪一下的感觉 |
+| Scroll distance | 1.00× | Total travel per wheel notch |
+| Animation time | 380 ms | Duration of the scrolling motion. Increase it for a longer glide. |
+| Acceleration max | 1.3× | Maximum boost when you turn the wheel repeatedly |
+| Animation easing | On | Gradual acceleration at the start and deceleration near the end |
+| Fine steps (tray menu, **细步进**) | On | The timing of small wheel increments. This reduces the pause before the final movement. |
 
-主窗口的 **+** 可以按进程名添加应用配置。例如，只想让微信聊天记录滑得久一点，可以给 `Weixin.exe` 单独调高动画时长。应用如何处理小幅滚轮输入，也会影响最终的画面效果。
+Use **+** in the settings window to add a profile by process name. For example, to give WeChat chat history a longer glide, add `Weixin.exe` and increase **Animation time** for that profile. The final scrolling behavior depends on how the receiving application handles small wheel increments.
 
-## 兼容性
+## Compatibility
 
-适用于 Windows 10/11 x64，使用系统的 .NET Framework 4.x 和 Windows Forms。高精度滚轮的小增量和带 Ctrl、Shift、Alt 或 Win 的组合输入会交给原应用处理。管理员权限窗口会使用原始滚动。检测到 SmoothScroll 同时运行时，SmoothFlow 会暂停，以免两个程序重复处理滚轮。
+SmoothFlow is written in C# using Windows Forms and .NET Framework 4.x. Small high-resolution wheel increments, scrolling over elevated windows, and wheel input with Ctrl, Shift, Alt, or the Windows key pass through to the application. SmoothFlow pauses if it detects SmoothScroll running, so the two utilities do not handle the same wheel input.
 
-## 从源码构建
+## Building from source
 
-在 Windows x64 上，打开项目目录并执行：
+Run this command from the repository directory on 64-bit Windows.
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
 ```
 
-脚本调用系统的 .NET Framework C# 编译器，生成 `SmoothFlow.exe`，并自动运行回归测试。测试包含单格滚动、连续拨动、改变方向、切换目标窗口、双轴滚动，以及 2,080 组经典模式逐帧对照。结果写入 `self-test-results.txt`。
+The script uses the system .NET Framework C# compiler and builds `SmoothFlow.exe`. It runs regression tests for individual notches, rapid scrolling, direction changes, switching windows, and horizontal and vertical scrolling. The tests also compare 2,080 pairs of frame outputs with the classic scrolling behavior. Results are written to `self-test-results.txt`.
 
-生成可分发的 ZIP 与 SHA-256 校验文件：
+To generate the portable ZIP and its SHA-256 checksum in `dist/`, run the packaging script.
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\package.ps1
 ```
 
-输出位于 `dist/`。许可条款见 [MIT License](LICENSE)。
+SmoothFlow is released under the [MIT License](LICENSE).
